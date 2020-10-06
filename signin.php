@@ -27,7 +27,7 @@ $description = "Online Examination Result  Management System (ERMS)-SLGTI";
                 $password = $_POST['password'];
                 $sql = "SELECT * FROM `user` WHERE `user_name` = '$username'";
                 $result =mysqli_query($con,$sql);
-                if(mysqli_num_rows($result)==1){
+                if(mysqli_num_rows($result)==1 ){
                     $row = mysqli_fetch_assoc($result);
                     if($password == $row['password']){                        
                         header("Location: index.php");
